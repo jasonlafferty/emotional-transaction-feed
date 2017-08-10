@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+      "airbnb",
+  ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "max-len": [2, 200]
+  }
+}

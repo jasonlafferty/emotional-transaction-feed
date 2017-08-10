@@ -1,0 +1,47 @@
+{
+  "name": "emotional-transaction-feed",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@storybook/react": "^3.2.3",
+    "babel-eslint": "7",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "react-hot-loader": "^1.3.1",
+    "react-scripts": "1.0.10"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "module-alias": "^2.0.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "jest": {
+    "testRegex": ".*(test).(js|jsx|jsxm)$",
+    "roots": [
+      "./"
+    ],
+    "moduleNameMapper": {
+      "^App/(.*)$": "<rootDir>/$1",
+      "^Actions/(.*)$": "<rootDir>/actions/$1",
+      "^Components/(.*)$": "<rootDir>/components/$1",
+      "^Constants/(.*)$": "<rootDir>/constants/$1",
+      "^Reducers/(.*)$": "<rootDir>/reducers/$1",
+      "^Selectors/(.*)$": "<rootDir>/selectors/$1"
+    }
+  }
+}
