@@ -15,12 +15,14 @@
     "react-scripts": "1.0.10"
   },
   "dependencies": {
+    "human-time": "^0.0.1",
     "immutable": "^3.8.1",
     "module-alias": "^2.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,17 +33,5 @@
     "build-storybook": "build-storybook -s public"
   },
   "jest": {
-    "testRegex": ".*(test).(js|jsx|jsxm)$",
-    "roots": [
-      "./"
-    ],
-    "moduleNameMapper": {
-      "^App/(.*)$": "<rootDir>/$1",
-      "^Actions/(.*)$": "<rootDir>/actions/$1",
-      "^Components/(.*)$": "<rootDir>/components/$1",
-      "^Constants/(.*)$": "<rootDir>/constants/$1",
-      "^Reducers/(.*)$": "<rootDir>/reducers/$1",
-      "^Selectors/(.*)$": "<rootDir>/selectors/$1"
-    }
   }
 }
