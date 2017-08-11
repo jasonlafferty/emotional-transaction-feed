@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { Map } from 'immutable';
 import rootReducer from './app/reducers/index';
 import './App.css';
+import { transactions } from './app/constants/index';
 
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-undef */
@@ -19,7 +19,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    const initialState = new Map({});
+    const initialState = { searchString: '', transactions };
 
     const store = createStore(
       rootReducer,
