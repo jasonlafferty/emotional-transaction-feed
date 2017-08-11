@@ -5,6 +5,8 @@ import thunk from 'redux-thunk';
 import rootReducer from './app/reducers/index';
 import './App.css';
 import { transactions } from './app/constants/index';
+import TransactionList from './app/components/transactionList.jsx';
+import FixedHeader from './app/components/fixedHeader.jsx';
 
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-undef */
@@ -36,8 +38,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <div className="App-header">Header</div>
-          <p className="App-intro">Intro</p>
+          <FixedHeader>Header</FixedHeader>
+          <TransactionList />
         </div>
       </Provider>
     );
