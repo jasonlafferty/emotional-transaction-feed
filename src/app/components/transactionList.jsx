@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import TransactionCard from './transactionCard.jsx';
-import { isStringContainedInStrings } from '../utils/index';
+import { isStringContainedInStrings, sortTransitionsByDate } from '../utils/index';
 
 const List = styled.div`
   background: #f2f4f8;
@@ -23,7 +23,7 @@ class TransactionList extends React.PureComponent {
     const { transactions, searchString } = this.props;
     return (
       <List>
-        {transactions.reduce((memo, transaction) => {
+        {transactions.sort(sortTransitionsByDate).reduce((memo, transaction) => {
           const { emotion, description } = transaction;
           if (isStringContainedInStrings(searchString, [emotion, description])) {
             return [
